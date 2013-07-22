@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css.css">
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script language="javascript">
+        $ ( document )
+                .ready (
+                function ( ) {
+                    if ( null === undefined ) {
+                        $ ( "#res9" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res9" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    var a;
+
+                    if ( a === undefined ) {
+                        $ ( "#res10" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res10" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( a === null ) {
+                        $ ( "#res11" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res11" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    a = 5;
+
+                    if ( a === 5 ) {
+                        $ ( "#res14" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res14" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( a === "5" ) {
+                        $ ( "#res16" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res16" ).text ( "false" ).addClass ( "error" );
+                    }
+                } );
+    </script>
+</head>
+<body>
+<label>is var null === undefined:</label>
+<label id="res9"></label>
+<br />
+<br />
+<label>is var a === undefined:</label>
+<label id="res10"></label>
+<br />
+<br />
+<label>is var a === null:</label>
+<label id="res11"></label>
+<br />
+<br />
+<label>(a = 5) - is a === 5:</label>
+<label id="res14"></label>
+<br />
+<br />
+<label>(a = 5) - is a === "5":</label>
+<label id="res16"></label>
+</body>
+</html>

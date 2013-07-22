@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css.css">
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script language="javascript">
+        $ ( document ).ready ( function ( ) {
+
+            var obj = function ( ) {
+            };
+
+            obj.prototype.download = function ( ) {
+                console.log ( "obj->download" );
+                return "obj->download";
+            };
+
+            var obj1 = new obj ( );
+
+            if ( obj1.download !== undefined ) {
+                console.log ( obj1.download ( )  );
+            }
+        } );
+    </script>
+</head>
+<body>
+</body>
+</html>

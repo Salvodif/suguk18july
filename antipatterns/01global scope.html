@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css.css">
+    <script src="../jquery-1.10.2.min.js"></script>
+
+    <script language="javascript">
+        // not declared variable
+        suguk = "";
+
+        // typical function
+        function GetPostCode ( ) {
+            return "html->GetPostCode";
+        }
+
+        // declared variable
+        var myNewObj = function ( ) {
+
+        };
+
+        myNewObj.download = function ( ) {
+            return "html->download";
+        };
+
+        var name = "Salvatore Di Fazio";
+
+        function showName ( ) {
+            console.log ( "showName:\t" + name );
+        }
+
+        function showAnotherName () {
+            name = "Another Name";
+            console.log ( "showAnotherName:\t" + name );
+        }
+
+        showName ( );
+        showAnotherName ( );
+        showName ( );
+        showSomeBodyName ( );
+
+        function showSomeBodyName () {
+            var name = "Somebody";
+            console.log ( "showSomeBodyName:\t" + name );
+        }
+    </script>
+    <script src="otherLib.js" language="javascript"></script>
+</head>
+<body>
+
+</body>
+</html>

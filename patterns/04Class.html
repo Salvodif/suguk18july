@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+
+<script language="JavaScript">
+    // Define a class like this
+    function Person ( value ) {
+        // Add object properties like this
+        this.name = value.name;
+        this.sex = value.sex;
+    }
+
+    // Instantiate new objects with 'new'
+    var person = new Person ( {
+        name: "Bob",
+        sex: "M"
+    } );
+
+    if ( person.speak === undefined ) {
+        Person.prototype.speak = function ( ) {
+            console.log ( "My name is " + this.name );
+            return "My name is " + this.name;
+        };
+    }
+
+    person.speak ( );
+
+    person.mySex = function ( ) {
+        console.log ( "sex: " + person.sex );
+        return "sex: " + person.sex;
+    };
+
+    person.mySex ( );
+
+    var newPerson = new Person ( {
+        name: "New Bob",
+        gender: "F"
+    } );
+
+    newPerson.speak ( );
+    newPerson.mySex ( );
+</script>
+</body>
+</html>

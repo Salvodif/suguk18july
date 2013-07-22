@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css.css">
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script language="javascript">
+        $ ( document )
+                .ready (
+                function ( ) {
+                    if ( '' == '0' ) {
+                        $ ( "#res1" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res1" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( '' == 0 ) {
+                        $ ( "#res2" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res2" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( 0 == '0' ) {
+                        $ ( "#res3" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res3" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( false == 'false' ) {
+                        $ ( "#res4" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res4" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( false == '0' ) {
+                        $ ( "#res5" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res5" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( false == undefined ) {
+                        $ ( "#res6" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res6" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( false == null ) {
+                        $ ( "#res7" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res7" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( null == undefined ) {
+                        $ ( "#res8" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res8" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( ' \t\r\n ' == 0 ) {
+                        $ ( "#res10" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res10" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    var a;
+
+                    if ( a == null ) {
+                        $ ( "#res12" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res12" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    a = 5;
+
+                    if ( a == 5 ) {
+                        $ ( "#res13" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res13" ).text ( "false" ).addClass ( "error" );
+                    }
+
+                    if ( a == "5" ) {
+                        $ ( "#res15" ).text ( "true" ).addClass ( "success" );
+                    } else {
+                        $ ( "#res15" ).text ( "false" ).addClass ( "error" );
+                    }
+                } );
+    </script>
+</head>
+<body>
+<label>'' == '0':</label>
+<label id="res1"></label>
+<br />
+<br />
+<label>'' == is 0:</label>
+<label id="res2"></label>
+<br />
+<br />
+<label>is 0 == '0':</label>
+<label id="res3"></label>
+<br />
+<br />
+<label>is false == 'false':</label>
+<label id="res4"></label>
+<br />
+<br />
+<label>is false == '0':</label>
+<label id="res5"></label>
+<br />
+<br />
+<label>is false == undefined:</label>
+<label id="res6"></label>
+<br />
+<br />
+<label>is false == null:</label>
+<label id="res7"></label>
+<br />
+<br />
+<label>is null == undefined:</label>
+<label id="res8"></label>
+<br />
+<br />
+<label>is '\t\r\n' == 0:</label>
+<label id="res10"></label>
+<br />
+<br />
+<label>is var a == null:</label>
+<label id="res12"></label>
+<br />
+<br />
+<label>(a = 5) - is a == "5":</label>
+<label id="res15"></label>
+</body>
+</html>

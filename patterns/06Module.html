@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<div id="output"></div>
+<br />
+<br />
+<label>My public Property:</label>
+<label id="outputProp"></label>
+<br />
+<br />
+<label>Can I access to a private method?</label>
+<label id="privateMtd"></label>
+
+<script language="JavaScript">
+    var myApp = myApp || {};
+    myApp = (function ( jQuery, global ) {
+        var privateMethod1, privateProperty1, __suguk;
+        var id, __next, __reset, __print;
+
+        privateMethod1 = function ( ) { /* ... */
+        };
+
+        privateProperty1 = "foobar";
+        __suguk = "SUGUK";
+
+        id = 0;
+
+        __next = function ( ) {
+            return id++;
+        };
+
+        __reset = function ( ) {
+            id = 0;
+        };
+
+        __print = function ( ) {
+            console.log ( id );
+        };
+
+        // revealing public API
+        return {
+            properties: {
+                Suguk: __suguk
+            },
+            utils: {
+                next: __next,
+                print: __print,
+                reset: __reset
+            }
+        };
+    }) ( $, this );
+
+    myApp.utils.next ( );
+    myApp.utils.next ( );
+    myApp.utils.reset ( );
+    myApp.utils.next ( );
+    //0, 1, undefined, 0
+
+    myApp.utils.print ( );
+
+    console.log ( myApp.properties.Suguk );
+
+    if ( myApp.utils.hasOwnProperty ( 'privateMethod1' ) !== true ) {
+        console.log ( "myApp->utils-| privateMethod1 is UNDEFINED" );
+    }
+
+    //// how I can extend my namespace
+    myApp.routers = myApp.routers || {};
+    myApp.model = myApp.model || {};
+    myApp.model.special = myApp.model.special || {};
+</script>
+</body>
+</html>

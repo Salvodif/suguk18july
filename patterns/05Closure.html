@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<label>No Closure result:</label>
+<div id="output1"></div>
+<br />
+<label>Closure result:</label>
+<div id="output2"></div>
+
+<script language="javascript">
+    function myClosure ( ) {
+        var date = new Date ( );
+
+        return function ( ) {
+            return date.getMilliseconds ( );
+        };
+    }
+
+    function myNoClosure ( ) {
+        var date = new Date ( );
+        return date.getMilliseconds ( );
+    }
+
+    // You can't do that because myClosure is only
+    // a method, so you can only invoke it;
+    // var noClosure = myNoClosure();
+    console.log ( "myNoClosure:\t" + myNoClosure ( ) );
+    window.setTimeout ( function ( ) {
+        console.log ( "myNoClosure:\t" + myNoClosure ( ) );
+    }, 500 );
+
+    var closure = myClosure ( );
+    console.log ( "closure:\t" + closure ( ) );
+    output2.innerHTML = closure ( );
+    window.setTimeout ( function ( ) {
+        console.log ( "closure:\t" + closure ( ) );
+    }, 500 );
+</script>
+
+</body>
+</html>
